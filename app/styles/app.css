@@ -37,3 +37,11 @@ a {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.rr-app-title > .rr-subtitle {
+  font-weight: normal;
+}
+
+.list > li {
+  margin-bottom: 10px;
+}
