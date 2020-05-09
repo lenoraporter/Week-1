@@ -13,7 +13,7 @@
   </ul>
   <div class="rr-new-label">
     {{#if this.isAddingArtist}}
-      <form class="rr-inline-form" {{on "submit" this.saveArtist}}></form>
+      <form class="rr-inline-form" {{on "submit" this.saveArtist}}>
         <Input
           @type="text"
           @value={{this.newArtistName}}
