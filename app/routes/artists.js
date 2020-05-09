@@ -1,16 +1,8 @@
 import Route from '@ember/routing/route';
 import EmberObject from '@ember/object';
 import { A } from '@ember/array';
-
-const Artists = EmberObject.extend({
-  name: '',
-});
-
-const Song = EmberObject.extend({
-  title: '',
-  rating: 0,
-  band: ''
-});
+import Artist from 'music-collection/models/artist'; 
+import Song from 'music-collection/models/song';
 
 export default class ArtistsRoute extends Route {
   model() {
@@ -38,19 +30,19 @@ export default class ArtistsRoute extends Route {
       rating: 4
     });
 
-    let megStallion = Artists.create({ 
+    let megStallion = Artist.create({ 
       name: 'Megan Thee Stallion',
       slug: 'meg-thee-stallion',
       songs: A([savage, bigDrank])
     });
 
-    let cardiB = Artists.create({
+    let cardiB = Artist.create({
       name: 'Cardi B ',
       slug: 'cardi-b',
       songs: A([bodakYellow])
     });
 
-    let dojaCat = Artists.create({
+    let dojaCat = Artist.create({
       name: 'Doja Cat',
       slug: 'doja-cat',
       songs: A([saySo])
