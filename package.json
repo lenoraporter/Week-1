@@ -58,5 +58,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "ember-font-awesome": "^4.0.0-rc.4"
   }
 }
