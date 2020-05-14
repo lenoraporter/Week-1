@@ -2,6 +2,7 @@ import Controller from '@ember/controller';
 import Song from 'music-collection/models/song';
 import { action } from '@ember/object';
 import { empty } from '@ember/object/computed';
+import song from "../../../models/song";
 
 export default class SongsController extends Controller {
   isAddingSong = false 
@@ -25,5 +26,10 @@ export default class SongsController extends Controller {
     let newSong = Song.create({ title: this.newSongTitle }); 
     this.model.songs.pushObject(newSong); 
     this.set('newSongTitle', '');
-  } 
+  }
+
+  @action
+  updateRating(song, rating) {
+    song.set('rating', rating);
+  }
 }
