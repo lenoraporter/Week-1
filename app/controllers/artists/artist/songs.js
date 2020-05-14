@@ -30,6 +30,6 @@ export default class SongsController extends Controller {
 
   @action
   updateRating(song, rating) {
-    song.set('rating', rating);
+    song.set('rating', song.rating === rating ? 0 : rating);
   }
 }
