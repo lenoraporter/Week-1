@@ -2,7 +2,6 @@ import Controller from '@ember/controller';
 import Song from 'music-collection/models/song';
 import { action } from '@ember/object';
 import { empty } from '@ember/object/computed';
-import song from "../../../models/song";
 
 export default class SongsController extends Controller {
   isAddingSong = false 

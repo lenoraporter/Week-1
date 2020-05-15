@@ -1,5 +1,4 @@
 import Route from '@ember/routing/route';
-import EmberObject from '@ember/object';
 import { A } from '@ember/array';
 import Artist from 'music-collection/models/artist'; 
 import Song from 'music-collection/models/song';
@@ -33,19 +32,22 @@ export default class ArtistsRoute extends Route {
     let megStallion = Artist.create({ 
       name: 'Megan Thee Stallion',
       slug: 'meg-thee-stallion',
-      songs: A([savage, bigDrank])
+      songs: A([savage, bigDrank]),
+      description: 'Megan Thee Stallion is a Houston Texas artist.'
     });
 
     let cardiB = Artist.create({
       name: 'Cardi B ',
       slug: 'cardi-b',
-      songs: A([bodakYellow])
+      songs: A([bodakYellow]),
+      description: 'Cardi B is a New York artist.'
     });
 
     let dojaCat = Artist.create({
       name: 'Doja Cat',
       slug: 'doja-cat',
-      songs: A([saySo])
+      songs: A([saySo]),
+      description: 'Doja Cat is a Los Angeles artist.'
     });
 
     return A([megStallion, cardiB, dojaCat]);
