@@ -47,7 +47,7 @@ export default class ArtistsRoute extends Route {
       name: 'Doja Cat',
       slug: 'doja-cat',
       songs: A([saySo]),
-      description: 'Doja Cat is a Los Angeles artist.'
+      description: 'Doja Cat is a Los artist.'
     });
 
     return A([megStallion, cardiB, dojaCat]);
