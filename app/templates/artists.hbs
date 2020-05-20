@@ -2,12 +2,11 @@
   <ul class="rr-list">
     {{#each this.model as |artist|}}
       <li class="rr-list-item">
-        {{#link-to "artists.artist.index" band class="rr-band-link"}}
-          {{artist.name}}
+        <LinkTo @route="artists.artist" @model={{artist.slug}} class="rr-band-link">          {{artist.name}}
           <span class="rr-pointer">
             {{fa-icon "angle-right"}}
           </span>
-        {{/link-to}}
+        </LinkTo>
       </li>
     {{/each}}
   </ul>
