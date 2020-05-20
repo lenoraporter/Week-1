@@ -31,4 +31,11 @@ export default class SongsController extends Controller {
   updateRating(song, rating) {
     song.set('rating', song.rating === rating ? 0 : rating);
   }
+
+  resetController(controller) {
+    controller.setProperties({
+      isAddingSong: false,
+      newSongTitle: ''
+    });
+  }
 }
