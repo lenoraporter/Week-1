@@ -8,7 +8,7 @@ export default class Router extends EmberRouter {
   init() {
     this._super();
     this.setDocumentTitle();
-  },
+  }
 
   setDocumentTitle() {
     this.on('routeDidChange', (transition) => {
@@ -24,10 +24,10 @@ export default class Router extends EmberRouter {
           let artistRouteInfo = transition.to.find(info => info.name.includes('artists.artist'));
           let artistSlug = artistRouteInfo.params.slug;
           let artistName = artistSlug.split('-').map(s => capitalize(s)).join('');
-          return `${bandName} songs`;
+          return `${artistName} songs`;
         }
       }
-      let titleSegment = [];
+      let titleSegments = [];
       let titleSetter = pageTitles[toRouteName];
       if (titleSetter) {
         titleSegments.push(titleSetter());
