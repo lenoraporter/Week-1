@@ -1,7 +1,4 @@
 import Route from '@ember/routing/route';
-import { A } from '@ember/array';
-import Artist from 'music-collection/models/artist'; 
-import Song from 'music-collection/models/song';
 
 export default class ArtistsRoute extends Route {
   model() {
@@ -49,7 +46,6 @@ export default class ArtistsRoute extends Route {
       songs: A([saySo]),
       description: 'Doja Cat is a Los Angeles artist.'
     });
-
-    return A([megStallion, cardiB, dojaCat]);
+    return this.store.findAll('band');
   }
 }
