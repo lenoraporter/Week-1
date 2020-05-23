@@ -17,14 +17,14 @@ export default class Router extends EmberRouter {
       }
       let toRouteName = transition.to.name;
       let pageTitles = {
-        'artists.index': () => {
-          return 'Artists';
+        'bands.index': () => {
+          return 'Bands';
         },
-        'artists.artist.songs': () => {
-          let artistRouteInfo = transition.to.find(info => info.name.includes('artists.artist'));
-          let artistSlug = artistRouteInfo.params.slug;
-          let artistName = artistSlug.split('-').map(s => capitalize(s)).join('');
-          return `${artistName} songs`;
+        'bands.band.songs': () => {
+          let bandRouteInfo = transition.to.find(info => info.name.includes('bands.band'));
+          let bandSlug = bandRouteInfo.params.slug;
+          let bandName = bandSlug.split('-').map(s => capitalize(s)).join('');
+          return `${bandName} songs`;
         }
       }
       let titleSegments = [];
@@ -39,8 +39,8 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  this.route('artists', function() {
-    this.route('artist', { path: ':slug'}, function () {
+  this.route('bands', function() {
+    this.route('band', { path: ':slug'}, function () {
       this.route('songs');
       this.route('details');
     });
